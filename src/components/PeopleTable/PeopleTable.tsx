@@ -30,7 +30,11 @@ export const PeopleTable: React.FC<Props> = ({
 
       <tbody>
         {people.length === 0 && (
-          <p data-cy="noPeopleMessage">There are no people on the server</p>
+          <tr>
+            <td data-cy="noPeopleMessage" colSpan={6}>
+              There are no people on the server
+            </td>
+          </tr>
         )}
         {people.map(person => {
           return (
